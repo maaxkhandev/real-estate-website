@@ -12,6 +12,11 @@
   margin: 0;
   padding: 0;
 }
+section,
+footer {
+  padding-block: 60px;
+}
+
 section h1,
 section h2,
 section h3,
@@ -131,10 +136,6 @@ footer a:hover:after {
   filter: brightness(40%);
 }
 
-.section-top-margin {
-  padding-top: 10rem;
-}
-
 .navbar {
   background-color: var(--section-background);
 }
@@ -157,7 +158,6 @@ footer a:hover:after {
 #home {
   background-color: var(--section-background);
   position: relative;
-  padding-bottom: 100px;
 }
 
 .hero-image img {
@@ -297,8 +297,6 @@ footer a:hover:after {
 
 #about-dwello {
   background-color: var(--section-background);
-  padding: 4rem 0;
-  margin-top: 10rem;
 }
 
 #about-dwello h2 {
@@ -386,8 +384,6 @@ footer a:hover:after {
 /* Footer section start  */
 footer {
   background-color: var(--card-background);
-  padding-block: 6rem;
-  margin-top: 4rem;
 }
 
 footer p {
@@ -423,19 +419,33 @@ footer a {
 }
 /* Footer section end  */
 
+@media screen and (max-width: 1400px) {
+  #about-dwello h2 {
+    width: 40%;
+  }
+}
 @media screen and (max-width: 1200px) {
+  #home {
+    padding-block: 90px !important;
+  }
   .choose-us-card {
     min-height: 300px;
   }
 }
 
 @media screen and (max-width: 992px) {
+  section {
+    padding-block: 30px;
+  }
   #home {
-    padding-bottom: 0;
+    padding-block: 60px !important;
+  }
+  #dream-home {
+    margin-top: 340px;
   }
 
   #home h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     line-height: 50px;
   }
   .navbar .nav-link {
@@ -448,17 +458,13 @@ footer a {
     flex-direction: column;
     gap: 20px;
     width: 90%;
-    bottom: -400px;
+    bottom: -430px;
     margin-inline: auto;
     left: 0;
     right: 0;
     justify-content: center;
     align-items: center;
     /* padding: 1rem 0.5rem; */
-  }
-
-  #dream-home {
-    margin-top: 40rem;
   }
 
   .choose-us-card {
@@ -476,8 +482,31 @@ footer a {
 }
 
 @media screen and (max-width: 768px) {
-  .container {
-    max-width: 100% !important;
-    padding-inline: 2rem !important;
+  section {
+    padding-block: 30px;
+  }
+  section h2 {
+    font-size: 30px;
+  }
+
+  section p {
+    font-size: 14px;
+  }
+
+  .dream-home-details p {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 576px) {
+  #home h1 {
+    font-size: 2.8rem;
+    line-height: 50px;
+  }
+  footer {
+    padding-left: 1rem;
+  }
+
+  .email-input {
+    min-width: 300px;
   }
 }
