@@ -12,6 +12,11 @@
   margin: 0;
   padding: 0;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 section,
 footer {
   padding-block: 60px;
