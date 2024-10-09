@@ -1,0 +1,483 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+
+:root {
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --section-background: #fef7f2;
+  --card-background: #ddc7bb;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+section h1,
+section h2,
+section h3,
+section h4,
+section h5,
+section h6,
+section p {
+  margin-bottom: 0;
+}
+
+form input:focus {
+  border: none;
+  outline: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+section p {
+  font-weight: 500;
+  font-size: 18px;
+  /* line-height: 160%; */
+  color: #4f3527;
+}
+
+section h2 {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 140%;
+  color: #2b1b12;
+}
+
+section h3 {
+  font-weight: 600;
+  font-size: 20px;
+  color: #4f3527;
+}
+
+.p-inside-card {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 160%;
+  color: #4f3527;
+}
+
+#custom-button {
+  background-color: var(--black-color);
+  color: var(--white-color);
+  border-radius: 8px;
+  font-weight: 500;
+  min-width: 100px;
+  max-width: 100px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3 ease-in;
+  border: 2px solid transparent;
+}
+
+#custom-button:hover {
+  background-color: transparent;
+  color: var(--black-color);
+  border: 2px solid var(--black-color);
+}
+
+.navbar-nav a,
+footer a {
+  position: relative;
+}
+.navbar-nav a::after,
+footer a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #4f3527;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+footer a::after {
+  bottom: -6px;
+}
+footer ul:last-child a::after {
+  bottom: -12px;
+}
+
+.navbar-nav a:hover:after,
+footer a:hover:after {
+  transform: scaleX(1);
+}
+
+.float-up:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 15px 5px rgba(43, 27, 18, 0.3);
+}
+
+.zoom-in {
+  overflow: hidden;
+}
+
+.zoom-in img {
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+
+.zoom-in:hover img {
+  transform: scale(1.05);
+  filter: brightness(40%);
+}
+
+.section-top-margin {
+  padding-top: 10rem;
+}
+
+.navbar {
+  background-color: var(--section-background);
+}
+
+.navbar .nav-link {
+  font-weight: 500;
+  font-size: 16px;
+  color: #2b1b12;
+}
+
+.navbar .nav-item {
+  padding: 0 1.2rem !important;
+}
+
+.nav-buttons a {
+  margin: 0 15px;
+}
+
+/* Hero section start  */
+#home {
+  background-color: var(--section-background);
+  position: relative;
+  padding-bottom: 100px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+}
+
+#home h1 {
+  font-weight: 800;
+  font-size: 6rem;
+  line-height: 90px;
+  color: #2b1b12;
+  display: inline-block;
+}
+
+#home form {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  bottom: -70px;
+  padding: 3.5rem 2rem;
+  border-radius: 10px;
+  background-color: #ddc7bb;
+}
+
+#home .home-input {
+  margin: 0 1.4rem;
+
+  position: relative;
+  width: 100%;
+}
+
+#home .home-input input {
+  border: none;
+  width: 100%;
+  padding: 15px 0;
+  border-radius: 5px;
+}
+
+#home .home-input img {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+#home input {
+  font-weight: 500;
+  font-size: 18px;
+  color: #695346;
+  padding-left: 20px !important;
+  padding-right: 50px !important;
+  /* padding-left: 20px; */
+}
+/* Hero section end  */
+
+/* dream home section start  */
+#dream-home {
+  padding-top: 14rem;
+}
+
+.dream-home-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  & img {
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    object-fit: cover;
+  }
+}
+
+.dream-home-details p {
+  font-size: 16px;
+}
+
+/* dream home section end  */
+
+/* why choose us section start */
+.choose-us-card {
+  background-color: var(--card-background);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 30px rgba(43, 27, 18, 0.12);
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 2rem;
+  min-height: 260px;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+
+.why-choose-image {
+  width: 83px;
+  height: 83px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fbf5f1;
+  border-radius: 8px;
+}
+/* why choose us section start */
+
+/* popular residence start  */
+.residence-card {
+  background-color: var(--card-background);
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.residence-image img {
+  width: 100%;
+  min-height: 350px;
+  border-radius: 20px 20px 0 0;
+}
+
+.residence-card-content {
+  padding: 1.6rem;
+}
+
+#residence-content-icon {
+  background-color: var(--white-color);
+  padding: 4px;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+/* popular residence end  */
+
+/* about dwello section start  */
+
+#about-dwello {
+  background-color: var(--section-background);
+  padding: 4rem 0;
+  margin-top: 10rem;
+}
+
+#about-dwello h2 {
+  width: 25%;
+}
+
+.about-dwello-card {
+  border-radius: 20px;
+  background-color: var(--card-background);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.testimonial-content h4 {
+  font-size: 18px;
+}
+
+.testimonial-content i {
+  font-size: 18px;
+  color: #ffc71e;
+}
+
+.review-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white-color);
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.testimonial-image img {
+  width: 100%;
+  height: 250px;
+  border-radius: 20px 20px 0 0;
+}
+
+.reviewer-details h3 {
+  font-size: 18px;
+}
+#about-dwello p {
+  font-size: 14px;
+}
+
+/* about dwello section end  */
+
+/* any question section start  */
+
+#any-question h2 {
+  width: 45%;
+  text-align: center;
+  margin-inline: auto;
+}
+.email-input {
+  min-width: 370px;
+  position: relative;
+  display: inline-block;
+}
+
+.email-input input {
+  width: 100%;
+  background-color: var(--card-background);
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #695346 !important;
+  padding: 12px 10px 12px 40px !important;
+}
+.email-input input::placeholder {
+  color: #695346;
+}
+.email-input img {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+/* any question section end  */
+
+/* Footer section start  */
+footer {
+  background-color: var(--card-background);
+  padding-block: 6rem;
+  margin-top: 4rem;
+}
+
+footer p {
+  font-size: 18px;
+  font-weight: 500;
+  color: #4f3527;
+  width: 50%;
+}
+
+footer h4 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+footer ul {
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+footer ul li {
+  padding-block: 1rem;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+footer li img {
+  margin-right: 10px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #4f3527;
+}
+/* Footer section end  */
+
+@media screen and (max-width: 1200px) {
+  .choose-us-card {
+    min-height: 300px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #home {
+    padding-bottom: 0;
+  }
+
+  #home h1 {
+    font-size: 3.5rem;
+    line-height: 50px;
+  }
+  .navbar .nav-link {
+    margin: 0 !important;
+  }
+  #home .home-input {
+    margin: 0;
+  }
+  #home form {
+    flex-direction: column;
+    gap: 20px;
+    width: 90%;
+    bottom: -400px;
+    margin-inline: auto;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    /* padding: 1rem 0.5rem; */
+  }
+
+  #dream-home {
+    margin-top: 40rem;
+  }
+
+  .choose-us-card {
+    min-height: 240px;
+  }
+
+  #about-dwello h2,
+  #any-question h2 {
+    width: 100%;
+  }
+
+  footer p {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 100% !important;
+    padding-inline: 2rem !important;
+  }
+}
